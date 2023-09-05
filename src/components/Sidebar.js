@@ -34,10 +34,10 @@ const Sidebar = () => {
     <div>{cart.map(item => {
       return <CartItem item={item} key={item.id}/>
     })}</div>
-    <div>
-    <div className = 'bg-pink-200 flex w-full justify-between items-center'>
-      <div>
-        <span>total </span>$ 10000
+    <div className=' flex flex-col gap-y-3 py-4 mt-4'>
+    <div className = ' flex w-full justify-between items-center'>
+      <div className='uppercase font-semibold'>
+        <span className='mr-2'>total </span>$ 10000
       </div>
       <div onClick={clearCart} className='cursor-pointer py-4 bg-red-500 text-white w-12 h12 flex justify-center
       items-center text-xl'>
