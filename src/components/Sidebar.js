@@ -12,7 +12,7 @@ import { CartContext } from '../contexts/CartContext'
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext)
-  const { cart, clearCart } = useContext(CartContext)
+  const { cart, clearCart, total } = useContext(CartContext)
   return (
     <div
       className={`${
@@ -45,7 +45,7 @@ const Sidebar = () => {
       <div className=' flex flex-col gap-y-3 py-4 mt-4'>
         <div className=' flex w-full justify-between items-center'>
           <div className='uppercase font-semibold'>
-            <span className='mr-2'>total </span>$ 10000
+            <span className='mr-2'>total </span> $ {parseFloat(total).toFixed(2)}
           </div>
           <div
             onClick={clearCart}
